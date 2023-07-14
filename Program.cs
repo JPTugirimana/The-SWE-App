@@ -1,18 +1,27 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+//using sweapp.Data;
+using sweapp.Models;
+using Microsoft.Extensions.DependencyInjection;
 using sweapp.Data;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SweappContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sweappContext") ?? throw new InvalidOperationException("Connection string 'sweappContext' not found.")));
 
-// Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+    .AddEntityFrameworkStores<SweappContext>();
+/*
+builder.Services.AddIdentity<AppUser, IdentityRole>()
+    .AddEntityFrameworkStores<SweappContext>();
+*/
 builder.Services.AddControllersWithViews();
+builder.Services.AddMvc();
+
 
 var app = builder.Build();
 
@@ -39,6 +48,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.MapRazorPages();
 
 app.Run();
