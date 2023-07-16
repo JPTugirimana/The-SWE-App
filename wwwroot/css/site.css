@@ -15,4 +15,82 @@ html {
 
 body {
   margin-bottom: 60px;
+  width: 100%;
 }
+
+/* Customizations */
+
+.navbar {
+    background-color: lightgray;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.navbar-nav {
+    padding-left: 10%;
+}
+
+    .navbar-nav .nav-link {
+        margin-right: 15px;
+    }
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-brand {
+    color: #3f2d2d;
+}
+.container {
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; /* Footer height */
+    line-height: 35px !important;
+}
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 17%;
+    margin-top: 5%;
+}
+
+    .bio div {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+.profile-image {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bio-text h1, h2, p {
+    text-align: left;
+}
+
+.bio-text h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+.bio-text h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1.25rem;
+}
+
+.bio-text p {
+    margin-top: 0.25rem;
+}
+
