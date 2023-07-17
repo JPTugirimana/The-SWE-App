@@ -25,9 +25,8 @@
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AppUserId)
+                Actions
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -40,13 +39,11 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LinkUrl)
+                    <a href="@Html.DisplayFor(modelItem => item.LinkUrl)" target="_blank"> GitHub Link </a>
+                
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AppUserId)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

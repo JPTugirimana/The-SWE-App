@@ -94,3 +94,25 @@ body {
     margin-top: 0.25rem;
 }
 
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+    .logos img {
+        width: 100px; /* Adjust the width as per your preference */
+        height: 100px; /* Adjust the height as per your preference */
+        margin: 10px; /* Adjust the margin as per your preference */
+        object-fit: contain;
+    }
+
+.links {
+    text-align: left;
+
+}
+.links a {
+    margin-top: 2rem;
+}
