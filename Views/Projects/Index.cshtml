@@ -22,9 +22,6 @@
                 @Html.DisplayNameFor(model => model.LinkUrl)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
-            <th>
                 Actions
             </th>
         </tr>
@@ -39,11 +36,15 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                    <a href="@Html.DisplayFor(modelItem => item.LinkUrl)" target="_blank"> GitHub Link </a>
+                    @if (item.LinkUrl == "Link NOT provided!")
+                    {
+                        @Html.DisplayFor(modelItem => item.LinkUrl)
+                    }
+                    else{
+                        <a href="@Html.DisplayFor(modelItem => item.LinkUrl)" target="_blank"> Project Link </a>
+                    }
+                    
                 
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
