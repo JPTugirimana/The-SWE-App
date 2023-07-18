@@ -60,7 +60,7 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
     - name: Install dependencies
-      run: dotnet add package 
+      run: dotnet add package Microsoft.EntityFrameworkCore.SqlServer
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
