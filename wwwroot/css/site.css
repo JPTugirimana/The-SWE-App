@@ -116,3 +116,8 @@ body {
 .links a {
     margin-top: 2rem;
 }
+
+.btn-primary {
+    background-color: #737173;
+    border-color: #737173;
+}
