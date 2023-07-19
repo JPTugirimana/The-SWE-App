@@ -5,8 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-sweapp-69b16826-6501-4ba5-8880-d06cfd8ff26b</UserSecretsId>
-    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    
   </PropertyGroup>
 
   <ItemGroup>
