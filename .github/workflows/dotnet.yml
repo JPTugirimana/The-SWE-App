@@ -24,10 +24,12 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Upload and collect coverage reports to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage/reports/
-        flags: unit_tests
-        verbose: true
+        file: ./coverage.xml
+        flags: tests
+        name: codecov-umbrella
+        yml: ./dotnet.yml
+        fail_ci_if_error: true
         
