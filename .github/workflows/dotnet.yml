@@ -25,6 +25,11 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage.xml
+        flags: unit_tests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+        verbose: true
         
