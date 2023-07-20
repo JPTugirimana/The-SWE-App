@@ -25,9 +25,9 @@ jobs:
       run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Upload and collect coverage reports to Codecov
       uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: ./coverage/reports/
         files: /home/runner/work/The-SWE-App/The-SWE-App/coverage.xml
         flags: unittests # optional
         name: codecov-umbrella # optional
