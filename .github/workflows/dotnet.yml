@@ -27,4 +27,9 @@ jobs:
       uses: codecov/codecov-action@v3
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unit_tests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+        verbose: true
         
