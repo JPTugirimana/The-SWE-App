@@ -1,5 +1,4 @@
-[![Code Coverage](https://codecov.io/gh/JPTugirimana/The-SWE-App/branch/master/graph/badge.svg)](https://codecov.io/gh/JPTugirimana/The-SWE-App)
-
+[![codecov](https://codecov.io/gh/JPTugirimana/The-SWE-App/branch/master/graph/badge.svg?token=OXDGTQF7XJ)](https://codecov.io/gh/JPTugirimana/The-SWE-App)
 
 # The SWE App
 
