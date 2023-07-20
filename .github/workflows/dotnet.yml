@@ -35,7 +35,7 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         directory: ./coverage/reports/
         env_vars: OS,PYTHON
-        files: /home/runner/work/The-SWE-App/The-SWE-App/coverage.xml
+        # files: /home/runner/work/The-SWE-App/The-SWE-App/coverage.xml
         flags: unittests # optional
         name: codecov-umbrella # optional
         fail_ci_if_error: true # optional (default = false)
