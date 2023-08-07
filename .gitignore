@@ -11,7 +11,8 @@
 *.sln.docstates
 obj
 bin
-appsettings.json
+*/appsettings.json
+.env
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -367,3 +368,4 @@ FodyWeavers.xsd
 
 #!**\testhost*.*
 #!**\Microsoft*.dll
+

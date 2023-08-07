@@ -1,13 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-//using sweapp.Data;
-using sweapp.Models;
-using Microsoft.Extensions.DependencyInjection;
 using sweapp.Data;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<SweappContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("sweappContext") ?? throw new InvalidOperationException("Connection string 'sweappContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sweappContextString") ?? 
+         throw new InvalidOperationException("Connection string 'sweappContextString' not found.")));
 
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
