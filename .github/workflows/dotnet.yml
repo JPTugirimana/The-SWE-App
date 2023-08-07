@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: dotnet build sweapp.csproj --configuration Release --no-restore
     - name: Test
-      run: dotnet test ./sweapp.sln --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      run: dotnet test sweapp.csproj --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Coverlet coverage test
       uses: b3b00/coverlet-action@1.2.5
     - name: Upload and collect coverage reports
