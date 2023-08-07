@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./sweapp.sln
     - name: Build
-      run: dotnet build sweapp/sweapp.csproj --configuration Release --no-restore
+      run: dotnet build sweapp.csproj --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Coverlet coverage test
