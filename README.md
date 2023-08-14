@@ -8,16 +8,16 @@ It helps them create online profile and showcase their portfolio projects.
 Technologies:
 - Backend: C# / ASP.NET Core MVC
 - Frontend: HTML/CSS/JS, Bootstrap
-- Database: MySQL 
+- Database: MSSQL Server
 
 # Notes
-In my local dev environment, I used MySQL Workbench and i had to put database connection info in the appsettings.json (which i listed in my .gitignore file)
-So, if you clone this repo, remember to add the connection (see example below) in you appsettings.json:
+In my local dev environment, I used Visual Studio (2022) SQL Server (I later deployed in a Docker container). I had to put database connection info in the appsettings.json (which i listed in my .gitignore file)
+So, if you clone this repo, remember to add the connection (see example below) in you appsettings.json with your own variables:
 
 ```
 {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Database=[YOUR-DATABASE];user=[YOUR-USERNAME-HERE];password=[YOUR-PASSWORD-HERE];"
+        "sweappContextString": "Data Source=[YOUR-SERVER-NAME-DOCKER-COMPOSE]; Initial Catalog=[YOUR-DATABASE]; User ID=sa;Password=[YOUR-PASSWORD-HERE];"
     }
 }
 ```
